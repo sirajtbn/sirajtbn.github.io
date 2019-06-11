@@ -1,0 +1,394 @@
+@import url("https://fonts.googleapis.com/css?family=Montserrat:300,700&display=swap");
+
+body,
+html {
+  margin: 0;
+  scroll-behavior: smooth;
+}
+
+body {
+  height: 100%;
+  font-family: "Montserrat", sans-serif;
+  // display: none;
+}
+
+header {
+  position: absolute;
+  padding: 1em;
+  z-index: 20;
+  display: flex;
+  justify-content: space-between;
+  width: calc(100% - 2em);
+  background: #000;
+
+  a {
+    text-decoration: none;
+  }
+
+  a.logo {
+    color: #fff;
+    font-weight: bold;
+  }
+
+  nav ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    margin: 0%;
+    padding: 0%;
+
+    li a {
+      padding: 0.25em;
+      color: #fff;
+    }
+  }
+}
+
+.wrapper {
+  display: grid;
+  grid-template-columns: auto;
+
+  section {
+    padding: 1em;
+
+    h1,
+    h2,
+    .read-btn {
+      margin: 0%;
+    }
+
+    h1 {
+      font-size: 3em;
+    }
+
+    .container {
+      display: grid;
+    }
+
+    h2 {
+      font-size: 1.4rem;
+    }
+
+    .read-btn {
+      text-decoration: none;
+      color: black;
+      font-weight: bold;
+      padding-left: 1em;
+      color: #fff;
+    }
+
+    .primary {
+      padding: 1.5em 3em;
+      border: 2px solid white;
+      display: inline-block;
+      margin-top: 1.5em;
+    }
+
+    .clipper {
+      overflow: hidden;
+    }
+  }
+
+  section.hero {
+    color: #fff;
+    padding-top: 5em;
+    background: url("/images/hero.jpg") no-repeat;
+    background-size: cover;
+
+    p {
+      width: 50%;
+      font-size: 1.2em;
+      margin-bottom: 0%;
+    }
+  }
+
+  section.sidebar {
+    font-size: 0.9em;
+    line-height: 1.6em;
+    padding-top: calc(8em - 5px);
+    padding-bottom: 8em;
+    background: linear-gradient(
+      180deg,
+      #fcfcfc 0%,
+      rgba(191, 191, 196, 0.48) 113.13%
+    );
+
+    h2 {
+      font-size: 2.4em;
+    }
+
+    p {
+      font-size: 1.6em;
+    }
+
+    a {
+      text-decoration: none;
+      display: inline-block;
+      padding: 1em 2em;
+      margin-left: 1px;
+      color: black;
+      border: 1px solid black;
+      font-weight: bold;
+      font-size: 1.4em;
+    }
+  }
+
+  section#products {
+    background: #e1daee;
+    color: #3e34ac;
+
+    p {
+      color: black;
+    }
+
+    .product {
+      padding: 3rem 0;
+
+      h3 {
+        font-size: 1.6em;
+      }
+
+      p {
+        font-size: 1.2em;
+      }
+    }
+  }
+
+  section#products,
+  section#about,
+  section#contact {
+    padding-top: 8em;
+    padding-bottom: 8em;
+
+    h2 {
+      font-size: 2.5em;
+      text-align: center;
+      padding: 1.8rem;
+    }
+
+    .item-image,
+    .about-image {
+      width: 100%;
+    }
+
+    .clipper {
+      overflow: hidden;
+    }
+  }
+
+  section#about {
+    background: #293434;
+    color: whitesmoke;
+
+    p {
+      font-size: 1.2em;
+    }
+  }
+
+  section#contact {
+    color: #fff;
+    background: linear-gradient(
+      108.85deg,
+      #5e52ad 19.65%,
+      rgba(44, 35, 169, 0.93) 91.6%
+    );
+
+    ul {
+      list-style-type: none;
+      padding: 0%;
+
+      li {
+        padding: 0.5em 0em;
+
+        a {
+          text-decoration: none;
+          color: white;
+        }
+      }
+    }
+
+    .contact-grid {
+      display: grid;
+      grid-auto-columns: auto;
+      grid-gap: 2em;
+    }
+
+    input,
+    textarea {
+      border: 2px solid white;
+      background: linear-gradient(
+        108.85deg,
+        rgba(44, 35, 169, 0.93) 19.65%,
+        #5e52ad 91.6%
+      );
+      padding: 1.2rem 1rem;
+      display: block;
+      margin-bottom: 1em;
+      color: white;
+      font-size: 1em;
+    }
+
+    input {
+      width: calc(100% - 3em);
+    }
+
+    textarea {
+      width: calc(100% - 3.6em);
+    }
+
+    button {
+      border: 2px solid white;
+      background: linear-gradient(
+        108.85deg,
+        rgba(44, 35, 169, 0.93) 19.65%,
+        #5e52ad 91.6%
+      );
+      padding: 0.7em 2em;
+      display: block;
+      width: auto;
+      margin: 0;
+      color: white;
+      font-size: 1em;
+      cursor: pointer;
+    }
+
+    ::placeholder {
+      color: rgba($color: #fff, $alpha: 0.6);
+    }
+  }
+}
+
+footer {
+  padding: 1em;
+
+  a {
+    text-decoration: none;
+    font-weight: bold;
+  }
+}
+
+#msg-success {
+  display: none;
+  position: fixed;
+  right: 1em;
+  top: 2em;
+  padding: 1em 2em;
+  background: rgba($color: #000, $alpha: 0.5);
+  color: white
+
+}
+
+#goBackOnTopButton {
+  display: none; /* Hidden by default */
+  position: fixed; /* Fixed/sticky position */
+  bottom: 20px; /* Place the button at the bottom of the page */
+  right: 30px; /* Place the button 30px from the right */
+  z-index: 99; /* Make sure it does not overlap */
+  border: none; /* Remove borders */
+  outline: none; /* Remove outline */
+  background-color: rgba($color: #000, $alpha: 0.2); /* Set a background color */
+  color: white; /* Text color */
+  cursor: pointer; /* Add a mouse pointer on hover */
+  padding: 15px; /* Some padding */
+  border-radius: 10px; /* Rounded corners */
+  font-size: 18px; /* Increase font size */
+}
+
+@media only screen and (min-width: 720px) {
+  html {
+    font-size: 18px;
+    font-weight: 5000;
+  }
+
+  html,
+  body {
+    height: 100%;
+  }
+
+  header {
+    background: none;
+
+    nav ul {
+      li a {
+        color: black;
+      }
+    }
+  }
+
+  
+  .container section, #products, #about, #contact {
+    padding: 3em;
+  }
+
+  footer {
+    padding: 1em 3em;
+  }
+
+  section.hero {
+    height: calc(100vh - 8em);
+  }
+
+  .container {
+    display: grid;
+    grid-template-columns: 70% auto;
+  }
+
+  #product-panel {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-gap: 2.5rem;
+  }
+
+  section {
+    display: grid;
+    align-items: center;
+  }
+
+  #about {
+    .inner {
+      .anim-panel {
+        padding-top: 3em;
+        display: grid;
+        grid-template-columns: auto auto;
+        grid-gap: 5em;
+
+        p {
+          display: grid;
+          align-content: center;
+        }
+      }
+    }
+  }
+
+  .contact-grid {
+    grid-template-columns: 45% auto;
+  }
+
+
+
+.wrapper section#contact input {
+  width: calc(100% - 3.6em);
+}
+}
+
+@media only screen and (min-width: 1800px) {
+  html {
+    font-size: 30px;
+  }
+
+  #about .inner .anim-panel p {
+    padding-top: 01em;
+  }
+}
+
+@media only screen and (min-width: 2500px) {
+  html {
+    font-size: 56px;
+  }
+
+  #about .inner .anim-panel p {
+    padding-top: 0em;
+    line-height: 68px;
+  }
+}
